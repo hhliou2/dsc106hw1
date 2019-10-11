@@ -1,0 +1,56 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+<script>
+	Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Average UCSD Acceptance Sizes'
+    },
+    xAxis: {
+        categories: ['Fulltime Men Applied', 'Fulltime Women Applied', 'Fulltime Men Admitted', 'Fulltime Women Admitted', 'Fulltime Men Enrolled', 'Fulltime Women Enrolled'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Population',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+		name: "Average 2005-2018",
+        data: [29191,33336,10555,12454,2237,2481]
+    }]
+});
+</script>
